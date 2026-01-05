@@ -1,0 +1,14 @@
+services:
+  sentinel-whisper-server:
+    build: .
+    container_name: sentinel-whisper-server
+    ports:
+      - "9000:9000"
+    environment:
+      APP_VERSION: "0.1.0"
+      ASR_MODEL: "small"
+      ASR_DEVICE: "cpu"
+      ASR_COMPUTE_TYPE: "int8"
+      ASR_MODEL_DIR: "/cache/models"
+    volumes:
+      - ./cache:/cache
