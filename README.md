@@ -137,7 +137,7 @@ If you want a more feature-complete solution (and/or GPU support), you can use *
 
 ## Releases & Docker image publishing (GHCR)
 
-This repo includes a GitHub Actions workflow that builds and publishes a **multi-arch** image to **GitHub Container Registry (GHCR)** when you push a git tag like `v1.0.0`.
+This repo includes a GitHub Actions workflow that builds and publishes a **multi-arch** image to **GitHub Container Registry (GHCR)** and **Docker Hub[^1]** when you push a git tag like `v1.0.0`.
 
 Example:
 ```bash
@@ -146,14 +146,18 @@ git push origin v1.0.0
 ```
 
 The image will be published as:
-- `ghcr.io/olivierpetitjean/sentinel-whisper-server:1.0.0`
+- `https://ghcr.io/<your-github-username>/sentinel-whisper-server:1.0.0`
+- `https://hub.docker.com/r/<your-docker-hub-username>/sentinel-whisper-server`
 
 By design, there is **no** `latest` tag.
 
+[^1]: see [GitHub Actions secrets](https://docs.github.com/fr/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) on your repository settings if you want to publish on Docker Hub.
 ---
 
 ## License
 
 MIT License. See `LICENSE`.
 
-This project bundles third-party components. See `THIRD_PARTY_NOTICES.md`.
+## Third-party notices
+
+This project bundles third-party components. See THIRD_PARTY_NOTICES.md.

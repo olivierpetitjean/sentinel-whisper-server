@@ -1,5 +1,11 @@
 FROM python:3.11-slim
 
+LABEL org.opencontainers.image.source="https://github.com/olivierpetitjean/sentinel-whisper-server" \
+      org.opencontainers.image.url="https://github.com/olivierpetitjean/sentinel-whisper-server" \
+      org.opencontainers.image.title="sentinel-whisper-server" \
+      org.opencontainers.image.description="Minimal CPU-only Whisper ASR server for Sentinel (FastAPI + Swagger/OpenAPI)." \
+      org.opencontainers.image.licenses="MIT"
+
 RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg \
   && rm -rf /var/lib/apt/lists/*
 
