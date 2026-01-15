@@ -1,0 +1,58 @@
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Python caches / build artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- Local config / secrets ---
+.env
+.env.*
+*.local
+*.log
+
+# --- Docker / compose local overrides ---
+docker-compose.override.yml
+
+# --- Model / runtime caches (keep your cache volume out of git) ---
+cache/
+models/
+downloads/
+huggingface/
+hf_cache/
+
+# --- Temporary / test files ---
+tmp/
+temp/
+*.wav
+*.mp3
+*.flac
+*.ogg
+tests/*.wav
+tests/*.mp3
+
+# --- Node / misc (if you ever add tooling) ---
+node_modules/
